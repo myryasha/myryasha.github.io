@@ -1,0 +1,50 @@
+@import 'bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+
+.main {
+	@extend .container;
+}
+.gallery {
+	@extend row;
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+}
+.gallery-item {
+
+	@include make-sm-column(6);
+	@include make-md-column(4);
+	margin-bottom: 30px;
+}
+
+.gallery-item__img {
+	width: 100%;
+}
+.gallery-item__desc {
+	background: #eee;
+	padding: 10px;
+	
+}
+@media (min-width: 768px) {
+	.gallery {
+		
+		height: 500px;
+
+		margin-bottom: 30px;
+		
+	}
+	.gallery-item {
+		height: 100%;
+		margin-bottom: 0;
+		overflow: hidden;
+		margin-bottom: 30px;
+	}
+	.gallery-item__desc {
+		padding: 10px;
+		height: 100%;
+		
+	}
+}
+
+
+
